@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processo de verificação</title>
+    <style>
+        button {
+            background-color: green;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .anima {
+            opacity: 0;
+            width: 50px;
+            height: 50px;
+            margin: 15px;
+            background-color: blue;
+            animation: anima 2s linear infinite;
+        }
+
+        @keyframes anima {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        p {
+            color: blue;
+            display: none;
+            margin: 20px;
+        }
+
+        button:active~.anima {
+            opacity: 1;
+        }
+
+        button:active~p {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button>Verificar</button>
+    <div class="anima"></div>
+    <p>Verificando... &#129488</p>
+
+
+</body>
+
+</html>
